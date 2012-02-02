@@ -1,0 +1,58 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U main%b		typeSafety.adb		ffd07d7e NE OO SU IL
+W simple_io%s		simple_io.ads		simple_io.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D typeSafety.adb	20120202134014 ea94d804
+D simple_io.ads		20120202132425 1544a57a
+D system.ads		20111213014402 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 8 a-textio.ads
+74I12*Field{integer}
+X 14 typeSafety.adb
+2U11*main 2b11 17l5 17t9
+3F14 Miles<long_float> 5r24
+4F14 Kilometers<long_float> 6r24 7r31 12r17
+5f9 london_paris{3F14} 9m9 12r28
+6f9 paris_geneva{4F14} 10m9 12r53
+7f9 london_paris_geneva{4F14} 11m9 14r19
+X 15 simple_io.ads
+4K9*Simple_io 14|1w6 1r21 15|162e14
+13I11*Field{8|74I12}
+55U13*put=56:50 14|13s9 15s9
+105U13*put=109:47 14|14s9
+107i23 aft{13I11} 14|14r41
+108i23 exp{13I11} 14|14r49
+136U13*new_line=137:46 14|16s9
+

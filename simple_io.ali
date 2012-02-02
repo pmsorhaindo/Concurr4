@@ -1,0 +1,254 @@
+V "GNAT Lib v4.6"
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvnnvnnvvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnn
+
+U simple_io%s		simple_io.ads		2d2950ae EE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.float_aux%s  a-tiflau.adb		a-tiflau.ali
+W ada.text_io.float_io%s
+W ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+W ada.text_io.integer_io%s
+W system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflau.ads		20090409150019 c0393f21
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiflio.adb		20090409150019 fd9b1cfc
+D a-tiinau.ads		20090409150019 8114c8e4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-tiinio.adb		20091130162119 df9cd7af
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D simple_io.ads		20120202132425 1544a57a
+D system.ads		20111213014402 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-fatflt.ads		20090409150019 11beb392
+D s-fatgen.ads		20090409150019 9267ca45
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 18|3r6 6r29 7r29 9r29 10r29 11r29 12r29 13r29 14r29 16r38 17r38
+. 18r38 26r38 31r38 33r38 38r38 40r38 43r38 46r38 51r38 54r38 56r38 58r38
+. 61r38 65r38 68r38 71r38 133r34 135r34 137r34 139r34 141r34 143r34 146r34
+. 149r34 153r36 154r36 155r36 156r36 157r36 158r36 159r36 160r36
+X 8 a-textio.ads
+49K13*Text_IO 472e16 18|3w10 6r33 7r33 9r33 10r33 11r33 12r33 13r33 14r33
+. 16r42 17r42 18r42 26r42 31r42 33r42 38r42 40r42 43r42 46r42 51r42 54r42
+. 56r42 58r42 61r42 65r42 68r42 71r42 133r38 135r38 137r38 139r38 141r38
+. 143r38 146r38 149r38 153r40 154r40 155r40 156r40 157r40 158r40 159r40 160r40
+52P9*File_Type(370R9) 18|9r41
+53E9*File_Mode 53e54 18|10r41
+53n23*In_File{53E9} 18|16r50
+53n32*Out_File{53E9} 18|17r50
+53n42*Append_File{53E9} 18|18r50
+64I9*Count<integer> 18|11r41
+69I12*Positive_Count{64I9} 18|12r41
+74I12*Field{integer} 18|13r41
+79I12*Number_Base{integer} 18|14r41
+87U14*Create 18|26r50
+93U14*Open 18|31r50
+99U14*Close 18|33r50
+166U14*New_Line 18|146r46
+167U14*New_Line 18|137r46
+169U14*Skip_Line 18|149r46
+170U14*Skip_Line 18|139r46
+172V13*End_Of_Line{boolean} 18|143r46
+173V13*End_Of_Line{boolean} 18|135r46
+184V13*End_Of_File{boolean} 18|141r46
+185V13*End_Of_File{boolean} 18|133r46
+206U14*Get 18|43r50
+207U14*Get 18|38r50
+208U14*Put 18|46r50
+209U14*Put 18|40r50
+240U14*Get 18|61r50
+241U14*Get 18|51r50
+242U14*Put 18|68r50
+243U14*Put 18|56r50
+245U14*Get_Line 18|65r50
+250U14*Get_Line 18|54r50
+260U14*Put_Line 18|71r50
+264U14*Put_Line 18|58r50
+293X4*Status_Error 18|153r48
+294X4*Mode_Error 18|154r48
+295X4*Name_Error 18|155r48
+296X4*Use_Error 18|156r48
+297X4*Device_Error 18|157r48
+298X4*End_Error 18|158r48
+299X4*Data_Error 18|159r48
+300X4*Layout_Error 18|160r48
+X 10 a-tiflio.ads
+45k21*Float_IO 88e25 18|7r41
+51U14*Get 18|122r47[7]
+56U14*Get 18|104r47[7]
+60U14*Put 18|128r47[7]
+67U14*Put 18|109r47[7]
+73U14*Get 18|113r47[7]
+78U14*Put 18|118r47[7]
+X 13 a-tiinio.ads
+45k21*Integer_IO 84e27 18|6r41
+50U14*Get 18|85r49[6]
+55U14*Get 18|77r49[6]
+59U14*Put 18|90r49[6]
+65U14*Put 18|81r49[6]
+70U14*Get 18|94r49[6]
+75U14*Put 18|98r49[6]
+X 18 simple_io.ads
+4K9*Simple_io 162l5 162e14
+6K11*Integer_io[13|45] 77r38 81r38 85r38 90r38 94r38 98r38
+7K11*Float_io[10|45] 104r38 109r38 113r38 118r38 122r38 128r38
+9P11*File_type{8|52P9} 22r37 27r37 32r37 41r33 44r33 59r33 62r33 66r33 69r33
+. 82r33 86r33 119r33 123r33 140r35 142r35 144r35 147r35
+10E11*File_mode{8|53E9} 16r25 17r25 18r25 23r33 28r33
+11I11*Count{8|64I9}
+12I11*Positive_count{8|69I12} 136r38 138r38 145r38 148r38
+13I11*Field{8|74I12} 76r33 79r33 84r33 88r33 103r33 106r33 107r33 108r33
+. 116r33 117r33 121r33 125r33 126r33 127r33
+14I11*Number_base{8|79I12} 80r33 89r33 97r33
+16e3*IN_FILE{10E11}
+17e3*out_FILE{10E11} 23r46
+18e3*APPend_FILE{10E11}
+22U13*create=26:50
+22p23 file{9P11}
+23e23 mode{10E11}
+24s23 name{string}
+25s23 form{string}
+27U13*open=31:50
+27p23 file{9P11}
+28e23 mode{10E11}
+29s23 name{string}
+30s23 form{string}
+32U13*close=33:50
+32p23 file{9P11}
+37U13*get=38:50
+37e23 item{character}
+39U13*put=40:50
+39e23 item{character}
+41U13*get=43:50
+41p23 file{9P11}
+42e23 item{character}
+44U13*put=46:50
+44p23 file{9P11}
+45e23 item{character}
+50U13*get=51:50
+50s23 item{string}
+52U13*get_line=54:50
+52s23 item{string}
+53i23 last{natural}
+55U13*put=56:50
+55s23 item{string}
+57U13*put_line=58:50
+57s23 item{string}
+59U13*get=61:50
+59p23 file{9P11}
+60s23 item{string}
+62U13*get_line=65:50
+62p23 file{9P11}
+63s23 item{string}
+64i23 last{natural}
+66U13*put=68:50
+66p23 file{9P11}
+67s23 item{string}
+69U13*put_line=71:50
+69p23 file{9P11}
+70s23 item{string}
+75U13*get=77:49
+75i23 item{integer}
+76i23 width{13I11}
+78U13*put=81:49
+78i23 item{integer}
+79i23 width{13I11}
+80i23 base{14I11}
+82U13*get=85:49
+82p23 file{9P11}
+83i23 item{integer}
+84i23 width{13I11}
+86U13*put=90:49
+86p23 file{9P11}
+87i23 item{integer}
+88i23 width{13I11}
+89i23 base{14I11}
+91U13*get=94:49
+91s23 from{string}
+92i23 item{integer}
+93i23 last{positive}
+95U13*put=98:49
+95s23 to{string}
+96i23 item{integer}
+97i23 base{14I11}
+102U13*get=104:47
+102f23 item{float}
+103i23 width{13I11}
+105U13*put=109:47
+105f23 item{float}
+106i23 fore{13I11}
+107i23 aft{13I11}
+108i23 exp{13I11}
+110U13*get=113:47
+110s23 from{string}
+111f23 item{float}
+112i23 last{positive}
+114U13*put=118:47
+114s23 to{string}
+115f23 item{float}
+116i23 aft{13I11}
+117i23 exp{13I11}
+119U13*get=122:47
+119p23 file{9P11}
+120f23 item{float}
+121i23 width{13I11}
+123U13*put=128:47
+123p23 file{9P11}
+124f23 item{float}
+125i23 fore{13I11}
+126i23 aft{13I11}
+127i23 exp{13I11}
+132V13*end_of_file=133:46{boolean}
+134V13*end_of_line=135:46{boolean}
+136U13*new_line=137:46
+136i26 spacing{12I11}
+138U13*skip_line=139:46
+138i26 spacing{12I11}
+140V13*end_of_file=141:46{boolean}
+140p26 file{9P11}
+142V13*end_of_line=143:46{boolean}
+142p26 file{9P11}
+144U13*new_line=146:46
+144p26 file{9P11}
+145i26 spacing{12I11}
+147U13*skip_line=149:46
+147p26 file{9P11}
+148i26 spacing{12I11}
+153X3*Status_error
+154X3*Mode_error
+155X3*Name_error
+156X3*Use_error
+157X3*Device_error
+158X3*End_error
+159X3*Data_error
+160X3*Layout_error
+
