@@ -1,12 +1,13 @@
 V "GNAT Lib v4.6"
 M P W=b
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U main%b		systemSizes.adb		53566d35 NE OO SU IL
+U main%b		systemSizes.adb		5c18fc67 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
 
 D ada.ads		20070406091342 3ffc8e18
 D a-except.ads		20090727140100 0c711ac9
@@ -19,7 +20,7 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D systemSizes.adb	20120202114039 6b3b98e1
+D systemSizes.adb	20120202121732 647509b3
 D system.ads		20111213014402 23e1f70b
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
@@ -27,6 +28,7 @@ D s-ficobl.ads		20100909103250 443b9d66
 D s-finimp.ads		20090409150019 46853fe8
 D s-finroo.ads		20090409150019 dbb860c9
 D s-imgint.ads		20090409150019 02dbe0c2
+D s-imgrea.ads		20090409150019 c7a851e2
 D s-parame.ads		20091130110856 9c5d83fa
 D s-secsta.ads		20090707124243 eea35a36
 D s-soflin.ads		20090729085153 9414c974
@@ -42,8 +44,9 @@ X 1 ada.ads
 16K9*Ada 19e8 12|1r6 1r23
 X 8 a-textio.ads
 49K13*Text_IO 472e16 12|1w10 1r27
-167U14*New_Line 12|6s45 8s44 10s44
-243U14*Put 12|5s9 6s9 7s9 8s9 9s9 10s9
+167U14*New_Line 12|5s31 7s45 9s44 11s44 12s9 13s28 15s40 17s39 19s41 21s43
+243U14*Put 12|5s9 6s9 7s9 8s9 9s9 10s9 11s9 13s9 14s9 15s9 16s9 17s9 18s9
+. 19s9 20s9 21s9
 X 12 systemSizes.adb
-3U11*main 3b11 11l5 11t9
+3U11*main 3b11 22l5 22t9
 
