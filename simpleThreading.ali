@@ -1,0 +1,88 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnvnvnnnnnnvnnnnnnnnnnnnnnv1+nnnnnn
+
+U execute_threads%b	simpleThreading.adb	cf53e734 NE OO SU IL
+W ada.tags%s		a-tags.adb		a-tags.ali
+W pack_factorial%s	pack_factorial.adb	pack_factorial.ali
+W pack_prime%s		pack_prime.adb		pack_prime.ali
+W simple_io%s		simple_io.ads		simple_io.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D simpleThreading.adb	20120212164438 33673cda
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D pack_factorial.ads	20120212144943 44a75739
+D pack_prime.ads	20120212164418 add729ad
+D simple_io.ads		20120202132425 1544a57a
+D system.ads		20111213014402 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tasren.ads		20090409150019 86fa7427
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 13 simpleThreading.adb
+4U11*execute_threads 4b11 28l5 28t20
+6t1 thread_1{17|2T19} 13r9 18r9
+7t1 thread_2{17|2T19} 14r9 22r9
+8t1 thread_3{18|2T19} 15r9 26r9
+9i1 factorial{positive} 18m26 19r14 22m26 23r14
+10b1 prime{boolean} 26m26 27r12
+X 17 pack_factorial.ads
+1K9*Pack_Factorial 13|1w17 2r16 17|6e19
+2T19*Task_factorial 13|6r12 7r12 17|5e27
+3Y23 start 13|13s18 14s18
+4Y23 finish 13|18s18 22s18
+X 18 pack_prime.ads
+1K9*Pack_prime 13|1w33 2r32 18|6e15
+2T19*Task_prime 13|8r12 18|5e23
+3Y23 start 13|15s18
+4Y23 finish 13|26s18
+X 19 simple_io.ads
+4K9*Simple_io 13|1w6 2r5 19|162e14
+55U13*put=56:50 13|17s9 21s9 25s9 27s23 27s41
+78U13*put=81:49 13|19s9 23s9
+136U13*new_line=137:46 13|19s27 23s27 27s63
+

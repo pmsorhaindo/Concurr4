@@ -1,0 +1,109 @@
+V "GNAT Lib v4.6"
+P SS ZX
+R nnnvnnnnnnnnnnnnnnvnnvnnnvnnnnnvnvnvnnnnnnnnvnnnnvnvnnnnnnvnnnnnnnnnnnnnnv1+nnnnnn
+
+U do_copy%b		do_copy.adb		263f4488 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W pack_threads%s	pack_threads.adb	pack_threads.ali
+W pack_types%s		pack_types.ads		pack_types.ali
+W system%s		system.ads		system.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-unccon.ads		20070406091342 f9eb8f06
+D do_copy.adb		20120212190412 f399b9ad
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D pack_threads.ads	20120212203054 2d485dbd
+D pack_types.ads	20120212170618 c083554c
+D system.ads		20111213014402 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tasren.ads		20090409150019 86fa7427
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 2r5 6r36 7r37
+X 9 a-textio.ads
+49K13*Text_IO 472e16 11|1w10 2r9 6r40 7r41
+52P9*File_Type(370R9) 11|6r48 7r49
+53n23*In_File{53E9} 11|10r40
+53n32*Out_File{53E9} 11|12r42
+87U14*Create 11|12s9
+88p7 File{52P9} 11|12r16
+89e7 Mode{53E9} 11|12r36
+90s7 Name{string} 11|12r52
+93U14*Open 11|10s9
+94p7 File{52P9} 11|10r14
+95e7 Mode{53E9} 11|10r32
+96s7 Name{string} 11|10r49
+99U14*Close 11|19s32 20s32
+167U14*New_Line 11|27s70 29s69 32s52
+243U14*Put 11|27s33 29s33 32s17
+295X4*Name_Error 11|24r14
+X 11 do_copy.adb
+4U11*do_copy 4b11 4>19 4>35 33l5 33t12
+4s19 from{string} 10r55 27r63
+4s35 to{string} 12r58 29r64
+5E14 State 5e46 8r16
+5n24 OPEN_FILE{5E14} 8r25 26r30
+5n34 CREATE_FILE{5E14} 11r17 28r30
+6p9 fd_in{16|4P14} 10r21 16r46 19r38
+7p9 fd_out{16|4P14} 12r24 17r47 20r38
+8e9 mode{5E14} 11m9 25r22
+15p17 buffers{15|16P14} 16r37 17r38
+16t17 reader{15|18T19} 19r17
+17t17 writer{15|22T19} 20r17
+X 15 pack_threads.ads
+4K9*Pack_threads 11|1w19 2r18 15|25e17
+5W24*PT_buffer 11|15r46 15|14e22
+16P14*P_PT_buffer(5W24) 11|15r27
+18T19*Task_read 11|16r26 15|20e22
+19Y23 finish 11|19s24
+22T19*Task_write 11|17r26 15|24e23
+23Y23 finish 11|20s24
+X 16 pack_types.ads
+3K9*Pack_types 11|1w33 2r32 16|13e15
+4P14*P_File_type(9|52P9) 11|6r17 7r18
+
