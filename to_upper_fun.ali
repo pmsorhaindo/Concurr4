@@ -1,0 +1,14 @@
+V "GNAT Lib v4.6"
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U to_upper_fun%b	to_upper_fun.adb	a247b6dd NE OO SU IL
+
+D system.ads		20111213014402 23e1f70b
+D to_upper_fun.adb	20120202161150 a247b6dd
+X 2 to_upper_fun.adb
+1V10*to_upper_fun{character} 1b10 1>24 11l5 11t17
+1e24 c{character} 5r12 6r55 8r27
+2e9 answer{character} 6m17 8m17 10r16
+3i9 diff_A_a{natural} 6r60
+

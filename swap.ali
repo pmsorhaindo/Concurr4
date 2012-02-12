@@ -1,0 +1,14 @@
+V "GNAT Lib v4.6"
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U swap%b		swap.adb		45098e1c NE OO SU IL
+
+D swap.adb		20120202182857 45098e1c
+D system.ads		20111213014402 23e1f70b
+X 1 swap.adb
+1U11*swap 1b11 1=16 1=38 7l5 7t9
+1i16 first{integer} 4r17 5m9
+1i38 second{integer} 5r18 6m9
+2i9 temp{integer} 4m9 6r19
+

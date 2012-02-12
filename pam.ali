@@ -1,0 +1,85 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+
+U main%b		pam.adb			7e899c91 NE OO SU IL
+W ada.tags%s		a-tags.adb		a-tags.ali
+W class_account%s	class_account.adb	class_account.ali
+W class_tui%s		class_tui.adb		class_tui.ali
+W interfaces%s		interfac.ads		interfac.ali
+W simple_io%s		simple_io.ads		simple_io.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D class_account.ads	20120207111649 687e358a
+D class_tui.ads		20120207125807 a5d6e626
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D pam.adb		20120207125724 a665ea47
+D simple_io.ads		20120202132425 1544a57a
+D system.ads		20111213014402 23e1f70b
+D s-conca2.ads		20090420091404 fbd0f2fc
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 8 a-textio.ads
+74I12*Field{integer}
+X 12 class_account.ads
+1K9*Class_account 18e18 16|2w17 3r16
+3R14*Account 16e19 16|6r16
+4F17*Money{float} 16|8r16 9r20
+8U19*deposit 16|26s41
+9U19*withdraw 16|33s41
+11V18*balance{4F17} 16|39s76
+X 13 class_tui.ads
+1K9*Class_tui 16e14 16|2w32 3r31
+2n28*M_1{2E14} 16|21r30
+2n33*M_2{2E14} 16|28r30
+2n38*M_3{2E14} 16|38r30
+2n48*M_QUIT{2E14} 16|40r30
+3R14*TUI 15e19 16|7r18
+5U19*menu 16|19s17
+6V18*event{2E14} 16|20s22
+7U19*message 16|24s41 31s41 35s49 39s33 43s33
+8U19*dialog 16|22s33 29s33
+X 16 pam.adb
+5U11*main 5b11 46l5 46t9
+6r9 user{12|3R14} 26m49 33m50 39r84
+7r9 screen{13|3R14} 19m22 20r28 22r40 24r50 29r40 31r49 35r57 39r41 43r41
+8f9 cash{12|4F17} 22m69 23r36 26r54 29m70 30r36 33r56
+9f9 received{12|4F17} 33m62 34r44
+11V18 float_image{string} 11b18 11>30 16l13 16t24 39s64
+11f30 f{float} 14r26
+12a17 res{string} 14m21 15r24
+X 17 simple_io.ads
+4K9*Simple_io 16|2w6 3r5 17|162e14
+13I11*Field{8|74I12}
+114U13*put=118:47 16|14s17
+116i23 aft{13I11} 16|14r29
+117i23 exp{13I11} 16|14r37
+
