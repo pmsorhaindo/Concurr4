@@ -8,17 +8,18 @@ package body class_lis is
                entry add(cashierName:in EmployeeName; returnedOrder:out Order) -- NEEDS WORK
                         when ordersInList < LIST_SIZE is
                 begin
-                        orderList(tail) := newOrder(cashierName);
-                        tail := tail+1;
-                        ordersInList := ordersInList +1;
-                        returnedOrder := orderList(tail);
                         nextID := nextID +1;
+                        orderList(tail) := newOrder(cashierName);
+                        returnedOrder := orderList(tail);                        
+                        tail := tail+1;
+                        ordersInList := ordersInList +1;                        
                 end;
 
                 entry remove(cookName:in EmployeeName; returnedOrder:out Order)
                         when ordersInList > 0 is --or else fin is
                 begin
                         returnedOrder := orderList(head);
+                        returnedOrder.cookName := cookName;
                         head := head+1;
                         ordersInList := ordersInList - 1;
                 end;

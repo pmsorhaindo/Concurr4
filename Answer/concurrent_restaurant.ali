@@ -3,7 +3,7 @@ M P AB W=b
 P SS ZX
 R nnnvnnnnnnnnnnnnnnnnnnnnnvnnnnnvnvnvnnnnnnnnvnnnnvnvnnnnnnvnnnnnnnnnnnnnnv1+nnnnnn
 
-U main%b		concurrent_restaurant.adb  59dd3ac0 NE OO SU IL
+U main%b		concurrent_restaurant.adb  00b1b741 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -30,7 +30,7 @@ D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D class_cashier.ads	20120216125402 392f1334
 D class_cook.ads	20120216142420 cb2887fc
-D class_lis.ads		20120216101101 d2df55e1
+D class_lis.ads		20120216150757 8bb3d860
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32

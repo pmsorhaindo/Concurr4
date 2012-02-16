@@ -1,8 +1,9 @@
 V "GNAT Lib v4.6"
 P SS ZX
-R nnnnnnnnnnnnnnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv1nnnnnv1+nn
+R nnnnnnnnnvnnnnnnnnvnnvnvnnnnvnnvnnnnnnnvnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv1nnnnnv1+nn
 
-U class_cashier%b	class_cashier.adb	f0aa48b2 OO PK
+U class_cashier%b	class_cashier.adb	37a2cc15 OO PK
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W class_lis%s		class_lis.adb		class_lis.ali
 W simple_io%s		simple_io.ads		simple_io.ali
@@ -14,7 +15,7 @@ W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U class_cashier%s	class_cashier.ads	feb4e3af EE NE OO PK
+U class_cashier%s	class_cashier.ads	a7d86e2e EE NE OO PK
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W class_lis%s		class_lis.adb		class_lis.ali
 W simple_io%s		simple_io.ads		simple_io.ali
@@ -25,6 +26,8 @@ W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-caldel.ads		20090409150019 9f20b83d
 D a-except.ads		20090727140100 0c711ac9
 D a-finali.ads		20090409150019 e5e85fa4
 D a-filico.ads		20090409150019 872dc219
@@ -37,8 +40,8 @@ D a-tiflio.ads		20090409150019 56fbda09
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D class_cashier.ads	20120216125402 392f1334
-D class_cashier.adb	20120216130544 0e1eab1d
-D class_lis.ads		20120216101101 d2df55e1
+D class_cashier.adb	20120216150706 907aa23b
+D class_lis.ads		20120216150757 8bb3d860
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -74,23 +77,29 @@ D s-tassta.ads		20101018103456 e88ef99e
 D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
-X 13 class_cashier.ads
-4K9*Class_cashier 15l5 15e18 14|4b14 25l5 25t18
-7a9*name{15|7A14} 14|13r38
-9T19*Task_cashier 9d32 12l13 12e25 14|9b19 23l13 23t25
-9p32 p_Orders{15|38P14} 14|13r25
-11Y23 finish 14|17b24
-X 14 class_cashier.adb
-6r9 currOrder{15|8R14} 13m43
+X 15 class_cashier.ads
+4K9*Class_cashier 15l5 15e18 16|4b14 31l5 31t18
+7a9*name{17|7A14}
+9T19*Task_cashier 9d32 12l13 12e25 16|9b19 29l13 29t25
+9p32 p_Orders{17|38P14} 16|13r25
+11Y23 finish 16|23b24
+X 16 class_cashier.adb
+6r9 currOrder{17|8R14} 13m51 15r45 17r44
 7b9 onDuty{boolean} 12r23
-X 15 class_lis.ads
-4K9*class_lis 13|1w17 2r16 14|1w17 2r16 15|43e14
-7A14*EmployeeName<string><integer> 13|7r16
-8R14*Order 14|6r21 15|14e19
-24Y23 add 14|13s34
-38P14*P_OrderList(23W24) 13|9r41
-X 19 simple_io.ads
-4K9*Simple_io 13|1w6 2r5 14|1w6 2r5 19|162e14
-55U13*put=56:50 14|14s25 21s25
-136U13*new_line=137:46 14|21s59
+X 17 class_lis.ads
+4K9*class_lis 15|1w17 2r16 16|1w17 2r16 17|43e14
+6I14*nextOrderID<integer>
+7A14*EmployeeName<string><integer> 15|7r16
+8R14*Order 16|6r21 17|14e19
+9i17*orderID{6I14} 16|15r55
+12a17*cashierName{7A14} 16|17r54
+24Y23 add 16|13s34
+38P14*P_OrderList(23W24) 15|9r41
+X 21 simple_io.ads
+4K9*Simple_io 15|1w6 2r5 16|1w6 2r5 21|162e14
+55U13*put=56:50 16|14s25 16s25 17s25 27s25
+55s23 item{string} 16|17r29
+78U13*put=81:49 16|15s25
+78i23 item{integer} 16|15r29
+136U13*new_line=137:46 16|18s25 27s59
 

@@ -26,7 +26,7 @@ package class_lis is
                 function newOrder(name:in EmployeeName) return Order;
 
         private
-                nextID : nextOrderID := 1;
+                nextID : nextOrderID := 0;
                 orderList : List_array;
                 head : List_index := 0;
                 tail : List_index := 0;

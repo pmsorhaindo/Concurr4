@@ -10,8 +10,14 @@ package body Class_cashier is -- implements Runnable
         begin
 
                 while onDuty loop
-                        p_Orders.add(name,currOrder);
-                        put("Order Placed ID: " ); --& currOrder.orderID & " placed by: " & currOrder.cashierName
+                        p_Orders.add("Bob       ",currOrder);
+                        put("Order Placed ID: ");
+                        put(Item => Integer(currOrder.orderID));
+                        put(" placed by: ");
+                        put(Item => String(currOrder.cashierName));
+                        new_line;
+
+                        delay 4.0;
                 end loop;
 
                 accept finish;
