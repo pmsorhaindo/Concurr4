@@ -1,0 +1,37 @@
+with Simple_io;
+use Simple_io;
+
+package Class_orderList is
+
+        protected type OrderList is
+                entry add(ch:in Character; no_more:in Boolean);
+                entry remove(ch:in out Character; no_more:out Boolean);
+        private
+                orderList : List_array;
+                head : List_index := 0;
+                tail : List_index := 0;
+                ordersInList : Num_orders := 0;
+                empty : Boolean := FALSE;
+        
+        type P_OrderList is access OrderList;
+        
+        LIST_SIZE : constant := 10;
+        List_index is mod LIST_SIZE;
+        type List_orders is array List_index of Order;
+        type Num_orders is new Integer range 0 .. LIST_SIZE;
+
+        
+        type nextOrderID is Integer range 0 .. Integer'Last; --:= 0;
+        
+        type Order is record
+	        orderID : Integer;
+	        --timePlaced : Time; -- TODO
+	        --timeCooked : Time; -- TODO
+	        cashierName : String(1 .. MAX_CHS);
+	        cookName : String(1 .. MAX_CHS);
+        end record;
+
+        procedure addOrder(cashierName:in String, new_order:out Order);
+        procedure removeOrder(cookName: in String, order_for_cooking:out Order);
+
+end Class_orderList;

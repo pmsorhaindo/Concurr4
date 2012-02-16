@@ -1,0 +1,90 @@
+V "GNAT Lib v4.6"
+M P AB W=b
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnnnnnvnnnnnvnvnvnnnnnnnnvnnnnvnvnnnnnnvnnnnnnnnnnnnnnv1+nnnnnn
+
+U main%b		concurrent_restaurant.adb  59dd3ac0 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W class_cashier%s	class_cashier.adb	class_cashier.ali
+W class_cook%s		class_cook.adb		class_cook.ali
+W class_lis%s		class_lis.adb		class_lis.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D class_cashier.ads	20120216125402 392f1334
+D class_cook.ads	20120216142420 cb2887fc
+D class_lis.ads		20120216101101 d2df55e1
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D concurrent_restaurant.adb  20120216142521 41680e3d
+D simple_io.ads		20120202132425 1544a57a
+D system.ads		20111213014402 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tasren.ads		20090409150019 86fa7427
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 19|1r6 2r5
+X 9 a-textio.ads
+49K13*Text_IO 472e16 19|1w10 2r9
+X 13 class_cashier.ads
+4K9*Class_cashier 15e18 19|1w31 2r30
+9T19*Task_cashier 12e25 19|10r19
+11Y23 finish 19|13s18
+X 14 class_cook.ads
+4K9*Class_cook 14e15 19|1w19 2r18
+6T19*Task_cook 8e22 19|11r19
+7Y23 finish 19|14s18
+X 15 class_lis.ads
+4K9*class_lis 43e14 19|1w46 2r45
+23W24*OrderList 35e22 19|9r35
+38P14*P_OrderList(23W24) 19|9r16
+X 19 concurrent_restaurant.adb
+4U11*main 4b11 16l5 16t9
+9p9 list{15|38P14} 10r32 11r29
+10t9 thread_1{13|9T19} 13r9
+11t9 thread_2{14|6T19} 14r9
+

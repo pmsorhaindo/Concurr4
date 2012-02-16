@@ -1,0 +1,96 @@
+V "GNAT Lib v4.6"
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv1nnnnnv1+nn
+
+U class_cashier%b	class_cashier.adb	f0aa48b2 OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W class_lis%s		class_lis.adb		class_lis.ali
+W simple_io%s		simple_io.ads		simple_io.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U class_cashier%s	class_cashier.ads	feb4e3af EE NE OO PK
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W class_lis%s		class_lis.adb		class_lis.ali
+W simple_io%s		simple_io.ads		simple_io.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D class_cashier.ads	20120216125402 392f1334
+D class_cashier.adb	20120216130544 0e1eab1d
+D class_lis.ads		20120216101101 d2df55e1
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D simple_io.ads		20120202132425 1544a57a
+D system.ads		20111213014402 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-taprob.ads		20090409150019 502249e3
+D s-tpoben.ads		20090409150019 e8374469
+D s-tpobop.ads		20090409150019 5f548bb3
+D s-tasren.ads		20090409150019 86fa7427
+D s-tassta.ads		20101018103456 e88ef99e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 13 class_cashier.ads
+4K9*Class_cashier 15l5 15e18 14|4b14 25l5 25t18
+7a9*name{15|7A14} 14|13r38
+9T19*Task_cashier 9d32 12l13 12e25 14|9b19 23l13 23t25
+9p32 p_Orders{15|38P14} 14|13r25
+11Y23 finish 14|17b24
+X 14 class_cashier.adb
+6r9 currOrder{15|8R14} 13m43
+7b9 onDuty{boolean} 12r23
+X 15 class_lis.ads
+4K9*class_lis 13|1w17 2r16 14|1w17 2r16 15|43e14
+7A14*EmployeeName<string><integer> 13|7r16
+8R14*Order 14|6r21 15|14e19
+24Y23 add 14|13s34
+38P14*P_OrderList(23W24) 13|9r41
+X 19 simple_io.ads
+4K9*Simple_io 13|1w6 2r5 14|1w6 2r5 19|162e14
+55U13*put=56:50 14|14s25 21s25
+136U13*new_line=137:46 14|21s59
+

@@ -1,13 +1,16 @@
-with Simple_io, class_cashier, class_cook, class_orderList;
-use Simple_io, class_cashier, class_cook, class_orderList;
+with Ada.Text_io, class_cook, class_cashier, class_lis;
+use Ada.Text_io, class_cook, class_cashier, class_lis;
 
 procedure main is
 
-thread_1: Task_cashier;
-thread_2: Task_cook;
-
 begin
-        thread_1.start();
-        thread_2.start();
 
+        declare
+        list : P_OrderList := new OrderList;
+        thread_1: Task_cashier(list);
+        thread_2: Task_cook(list);        
+        begin     
+        thread_1.finish;
+        thread_2.finish;
+        end;
 end main;
