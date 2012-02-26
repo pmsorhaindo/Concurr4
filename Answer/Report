@@ -4,15 +4,29 @@ Question 1
 Consumer Producer Problem using Java threads.
 
 
+Diagram
+Explain the solution
+Potential synchronization issues and how you have resolved them in question 1
+
+
 Question 2
 Consumer Producer Problem implemented on a distributed system.
+which should for example cover potential synchronization issues and how you have resolved them in question 1, the application protocol which your classes use to communicate in questions 2 and 3
 
 
 Question 3
 Enhanced the solution to question 2 to allow th Consumer to communicate to the Producer
 
+which should for example cover potential synchronization issues and how you have resolved them in question 1, the application protocol which your classes use to communicate in questions 2 and 3
 
 Question 4
 Implemented the Consumer Producer Problem using ADA Tasks. How does it differ to Java threads.
 
-Limited buffer in ADA as opposed to Java's linked list. d
+Limited buffer in ADA as opposed to Java's linked list.
+and a comparison of your Ada and Java solutions in question 4
+Library functions lacking in ADA
+
+Ada does not directly deal with minutes. Minutes are contained in the Seconds value, which is the number of seconds into the day for the current time. Seconds is a value from 0.0 through 86400.0
+
+
+A printed description and critique of your solutions (which should for example cover potential synchronization issues and how you have resolved them in question 1, the application protocol which your classes use to communicate in questions 2 and 3, and a comparison of your Ada and Java solutions in question 4).

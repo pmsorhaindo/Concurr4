@@ -7,8 +7,12 @@ package class_lis is
         type EmployeeName is new String(1 .. 10);
         type Order is record
 	        orderID : nextOrderID;
-	        --timePlaced : Time; -- TODO
-	        --timeCooked : Time; -- TODO
+	        timePlacedH : Integer;
+                timePlacedM : Integer;
+                timePlacedS : Integer;
+	        timeCookedH : Integer;
+	        timeCookedM : Integer;
+	        timeCookedS : Integer;
 	        cashierName : EmployeeName;
 	        cookName : EmployeeName;
         end record;

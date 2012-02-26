@@ -2,7 +2,7 @@ V "GNAT Lib v4.6"
 P SS ZX
 R nnnnnnnnnvnnnnnnnnvnnvnvnnnnvnnvnnnnnnnvnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv2nnnnnv1+nn
 
-U class_cook%b		class_cook.adb		071feb77 OO PK
+U class_cook%b		class_cook.adb		1770431d OO PK
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W class_lis%s		class_lis.adb		class_lis.ali
@@ -15,7 +15,7 @@ W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U class_cook%s		class_cook.ads		de87f880 EE NE OO PK
+U class_cook%s		class_cook.ads		cee850ea EE NE OO PK
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W class_lis%s		class_lis.adb		class_lis.ali
 W simple_io%s		simple_io.ads		simple_io.ali
@@ -41,7 +41,7 @@ D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D class_cook.ads	20120226134401 c8892127
 D class_cook.adb	20120226134355 d99813f7
-D class_lis.ads		20120226144512 034a7cdd
+D class_lis.ads		20120226161431 1325d4b7
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -80,7 +80,7 @@ D s-wchcon.ads		20090417130712 bfeb2e3d
 X 15 class_cook.ads
 4K9*Class_cook 15l5 15e15 16|4b14 39l5 39t15
 6T19*Task_cook 6d29 9l13 9e22 16|10b19 37l13 37t22
-6p29 p_Orders{17|38P14} 16|20r25
+6p29 p_Orders{17|42P14} 16|20r25
 7Y23 start 7>29 16|15b24 17l21 17t26
 7a29 cName{17|7A14} 16|16r33
 8Y23 finish 16|31b24
@@ -90,15 +90,15 @@ X 16 class_cook.adb
 12a9 name{17|7A14} 16m25 20r41
 15a30 cName{17|7A14}
 X 17 class_lis.ads
-4K9*class_lis 15|1w17 2r16 16|1w17 2r16 17|44e14
+4K9*class_lis 15|1w17 2r16 16|1w17 2r16 17|48e14
 6I14*nextOrderID<integer>
 7A14*EmployeeName<string><integer> 15|7r38 16|12r16 15r39
-8R14*Order 16|6r21 17|14e19
+8R14*Order 16|6r21 17|18e19
 9i17*orderID{6I14} 16|22r55
-12a17*cashierName{7A14} 16|24r54
-13a17*cookName{7A14} 16|26r54
-25Y23 remove 16|20s34
-38P14*P_OrderList(23W24) 15|6r40
+16a17*cashierName{7A14} 16|24r54
+17a17*cookName{7A14} 16|26r54
+29Y23 remove 16|20s34
+42P14*P_OrderList(27W24) 15|6r40
 X 21 simple_io.ads
 4K9*Simple_io 15|1w6 2r5 16|1w6 2r5 21|162e14
 55U13*put=56:50 16|21s25 23s25 24s25 25s25 26s25 35s25
