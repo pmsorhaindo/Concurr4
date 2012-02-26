@@ -9,9 +9,12 @@ package body Class_cook is
 
         task body Task_cook is
         begin
-
+                accept start(cName:in EmployeeName) do
+                        name := cName;
+                end start;
+                
                 while onDuty loop
-                        p_Orders.remove("Ed        ",currOrder);
+                        p_Orders.remove(name,currOrder);
                         put("Order Cooked ID: ");
                         put(Item => Integer(currOrder.orderID));
                         put(" placed by: ");

@@ -7,10 +7,14 @@ package body Class_cashier is -- implements Runnable
         onDuty : Boolean := TRUE;
        
         task body Task_cashier is
+
         begin
+                accept start(cName:in EmployeeName) do
+                        name :=cName;
+                end start;
 
                 while onDuty loop
-                        p_Orders.add("Bob       ",currOrder);
+                        p_Orders.add(name,currOrder);
                         put("Order Placed ID: ");
                         put(Item => Integer(currOrder.orderID));
                         put(" placed by: ");

@@ -1,0 +1,18 @@
+Java/CPL Assignment Report
+
+Question 1
+Consumer Producer Problem using Java threads.
+
+
+Question 2
+Consumer Producer Problem implemented on a distributed system.
+
+
+Question 3
+Enhanced the solution to question 2 to allow th Consumer to communicate to the Producer
+
+
+Question 4
+Implemented the Consumer Producer Problem using ADA Tasks. How does it differ to Java threads.
+
+Limited buffer in ADA as opposed to Java's linked list. d

@@ -3,11 +3,10 @@ use Simple_io, class_lis;
 
 package Class_cashier is -- implements Runnable
 	
-        --type Cashier is private;
-	name : EmployeeName;
-	
+        name : EmployeeName;
+
         task type Task_cashier(p_Orders:P_OrderList) is
-                --entry start; -- Rendezvous point
+                entry start(cName:in EmployeeName); -- Rendezvous point
                 entry finish; -- Rendezvous point
         end Task_cashier;
 

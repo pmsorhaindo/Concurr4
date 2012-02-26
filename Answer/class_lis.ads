@@ -36,6 +36,7 @@ package class_lis is
    
 
         type P_OrderList is access OrderList;       
+        type P_EName is access EmployeeName;
 
         --procedure addOrder(cashierName:in String; new_order:out Order);
         --procedure removeOrder(cookName: in String; order_for_cooking:out Order);

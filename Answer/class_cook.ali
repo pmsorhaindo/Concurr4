@@ -1,8 +1,8 @@
 V "GNAT Lib v4.6"
 P SS ZX
-R nnnnnnnnnvnnnnnnnnvnnvnvnnnnvnnvnnnnnnnvnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv1nnnnnv1+nn
+R nnnnnnnnnvnnnnnnnnvnnvnvnnnnvnnvnnnnnnnvnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv2nnnnnv1+nn
 
-U class_cook%b		class_cook.adb		1fe2e3b0 OO PK
+U class_cook%b		class_cook.adb		8a8f3116 OO PK
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W class_lis%s		class_lis.adb		class_lis.ali
@@ -15,7 +15,7 @@ W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U class_cook%s		class_cook.ads		55dffae6 EE NE OO PK
+U class_cook%s		class_cook.ads		306d8b45 EE NE OO PK
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W class_lis%s		class_lis.adb		class_lis.ali
 W simple_io%s		simple_io.ads		simple_io.ali
@@ -39,9 +39,9 @@ D a-textio.ads		20091028140912 386df5d4
 D a-tiflio.ads		20090409150019 56fbda09
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
-D class_cook.ads	20120216142420 cb2887fc
-D class_cook.adb	20120216145754 4a3d1956
-D class_lis.ads		20120216150757 8bb3d860
+D class_cook.ads	20120226130136 c5510bcf
+D class_cook.adb	20120226130221 bae2ba53
+D class_lis.ads		20120226115959 e07825f0
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -78,28 +78,32 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 15 class_cook.ads
-4K9*Class_cook 14l5 14e15 16|4b14 33l5 33t15
-6T19*Task_cook 6d29 8l13 8e22 16|10b19 31l13 31t22
-6p29 p_Orders{17|38P14} 16|14r25
-7Y23 finish 16|25b24
+4K9*Class_cook 17l5 17e15 16|4b14 36l5 36t15
+6a9*name{17|7A14} 16|13m25 17r41
+8T19*Task_cook 8d29 11l13 11e22 16|10b19 34l13 34t22
+8p29 p_Orders{17|38P14} 16|17r25
+9Y23 start 9>29 16|12b24 14l21 14t26
+9a29 cName{17|7A14} 16|13r33
+10Y23 finish 16|28b24
 X 16 class_cook.adb
-6r9 currOrder{17|8R14} 14m54 16r45 18r44 20r44
-7b9 onDuty{boolean} 13r23
+6r9 currOrder{17|8R14} 17m46 19r45 21r44 23r44
+7b9 onDuty{boolean} 16r23
+12a30 cName{17|7A14}
 X 17 class_lis.ads
-4K9*class_lis 15|1w17 2r16 16|1w17 2r16 17|43e14
+4K9*class_lis 15|1w17 2r16 16|1w17 2r16 17|44e14
 6I14*nextOrderID<integer>
-7A14*EmployeeName<string><integer>
+7A14*EmployeeName<string><integer> 15|6r16 9r38 16|12r39
 8R14*Order 16|6r21 17|14e19
-9i17*orderID{6I14} 16|16r55
-12a17*cashierName{7A14} 16|18r54
-13a17*cookName{7A14} 16|20r54
-25Y23 remove 16|14s34
-38P14*P_OrderList(23W24) 15|6r40
+9i17*orderID{6I14} 16|19r55
+12a17*cashierName{7A14} 16|21r54
+13a17*cookName{7A14} 16|23r54
+25Y23 remove 16|17s34
+38P14*P_OrderList(23W24) 15|8r40
 X 21 simple_io.ads
 4K9*Simple_io 15|1w6 2r5 16|1w6 2r5 21|162e14
-55U13*put=56:50 16|15s25 17s25 18s25 19s25 20s25 29s25
-55s23 item{string} 16|18r29 20r29
-78U13*put=81:49 16|16s25
-78i23 item{integer} 16|16r29
-136U13*new_line=137:46 16|21s25 29s59
+55U13*put=56:50 16|18s25 20s25 21s25 22s25 23s25 32s25
+55s23 item{string} 16|21r29 23r29
+78U13*put=81:49 16|19s25
+78i23 item{integer} 16|19r29
+136U13*new_line=137:46 16|24s25 32s59
 
