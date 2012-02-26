@@ -3,7 +3,7 @@ M P AB W=b
 P SS ZX
 R nnnvnnnnnnnnnnnnnnnnnnnnnvnnnnnvnvnvnnnnnnnnvnnnnvnvnnnnnnvnnnnnnnnnnnnnnv1+nnnnnn
 
-U main%b		concurrent_restaurant.adb  6b8895af NE OO SU IL
+U main%b		concurrent_restaurant.adb  88bacc82 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -17,6 +17,7 @@ W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
 D a-except.ads		20090727140100 0c711ac9
 D a-finali.ads		20090409150019 e5e85fa4
 D a-filico.ads		20090409150019 872dc219
@@ -30,7 +31,7 @@ D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D class_cashier.ads	20120226134519 aa38408a
 D class_cook.ads	20120226134401 c8892127
-D class_lis.ads		20120226115959 e07825f0
+D class_lis.ads		20120226144512 034a7cdd
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
 D i-cstrea.ads		20100622165701 1bd72c32
@@ -67,32 +68,32 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 19|1r6 2r5
-X 9 a-textio.ads
-49K13*Text_IO 472e16 19|1w10 2r9
-X 13 class_cashier.ads
-4K9*Class_cashier 12e18 19|1w31 2r30
-6T19*Task_cashier 9e25 19|10r19 11r19 14r19 15r19
-7Y23 start 19|20s18 21s18 24s18 25s18
-8Y23 finish 19|29s18 30s18 33s18 34s18
-X 14 class_cook.ads
-4K9*Class_cook 15e15 19|1w19 2r18
-6T19*Task_cook 9e22 19|12r19 13r19 16r19 17r19
-7Y23 start 19|22s18 23s18 26s18 27s18
-8Y23 finish 19|31s18 32s18 35s18 36s18
-X 15 class_lis.ads
-4K9*class_lis 44e14 19|1w46 2r45
-23W24*OrderList 35e22 19|9r35
-38P14*P_OrderList(23W24) 19|9r16
-X 19 concurrent_restaurant.adb
+16K9*Ada 19e8 20|1r6 2r5
+X 10 a-textio.ads
+49K13*Text_IO 472e16 20|1w10 2r9
+X 14 class_cashier.ads
+4K9*Class_cashier 12e18 20|1w31 2r30
+6T19*Task_cashier 9e25 20|10r19 11r19 14r19 15r19
+7Y23 start 20|20s18 21s18 24s18 25s18
+8Y23 finish 20|29s18 30s18 33s18 34s18
+X 15 class_cook.ads
+4K9*Class_cook 15e15 20|1w19 2r18
+6T19*Task_cook 9e22 20|12r19 13r19 16r19 17r19
+7Y23 start 20|22s18 23s18 26s18 27s18
+8Y23 finish 20|31s18 32s18 35s18 36s18
+X 16 class_lis.ads
+4K9*class_lis 44e14 20|1w46 2r45
+23W24*OrderList 35e22 20|9r35
+38P14*P_OrderList(23W24) 20|9r16
+X 20 concurrent_restaurant.adb
 4U11*main 4b11 38l5 38t9
-9p9 list{15|38P14} 10r32 11r32 12r29 13r29 14r32 15r32 16r29 17r29
-10t9 thread_1{13|6T19} 20r9 29r9
-11t9 thread_2{13|6T19} 21r9 30r9
-12t9 thread_3{14|6T19} 22r9 31r9
-13t9 thread_4{14|6T19} 23r9 32r9
-14t9 thread_5{13|6T19} 24r9 33r9
-15t9 thread_6{13|6T19} 25r9 34r9
-16t9 thread_7{14|6T19} 26r9 35r9
-17t9 thread_8{14|6T19} 27r9 36r9
+9p9 list{16|38P14} 10r32 11r32 12r29 13r29 14r32 15r32 16r29 17r29
+10t9 thread_1{14|6T19} 20r9 29r9
+11t9 thread_2{14|6T19} 21r9 30r9
+12t9 thread_3{15|6T19} 22r9 31r9
+13t9 thread_4{15|6T19} 23r9 32r9
+14t9 thread_5{14|6T19} 24r9 33r9
+15t9 thread_6{14|6T19} 25r9 34r9
+16t9 thread_7{15|6T19} 26r9 35r9
+17t9 thread_8{15|6T19} 27r9 36r9
 

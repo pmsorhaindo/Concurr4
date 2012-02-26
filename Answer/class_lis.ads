@@ -1,5 +1,5 @@
-with Simple_io;
-use Simple_io;
+with Simple_io, Ada.calendar;
+use Simple_io, Ada.calendar;
 
 package class_lis is
 
