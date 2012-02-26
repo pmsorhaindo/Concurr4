@@ -8,6 +8,9 @@ package body Class_cook is
 
 
         task body Task_cook is
+
+        name : EmployeeName;
+
         begin
                 accept start(cName:in EmployeeName) do
                         name := cName;

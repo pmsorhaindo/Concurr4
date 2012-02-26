@@ -7,7 +7,7 @@ package body Class_cashier is -- implements Runnable
         onDuty : Boolean := TRUE;
        
         task body Task_cashier is
-
+        name : EmployeeName;
         begin
                 accept start(cName:in EmployeeName) do
                         name :=cName;

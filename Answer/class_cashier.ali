@@ -39,8 +39,8 @@ D a-textio.ads		20091028140912 386df5d4
 D a-tiflio.ads		20090409150019 56fbda09
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
-D class_cashier.ads	20120226134034 aa38408a
-D class_cashier.adb	20120226134046 d34dfc0b
+D class_cashier.ads	20120226134519 aa38408a
+D class_cashier.adb	20120226134347 d34dfc0b
 D class_lis.ads		20120226115959 e07825f0
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
