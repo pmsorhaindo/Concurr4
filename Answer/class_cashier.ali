@@ -2,7 +2,7 @@ V "GNAT Lib v4.6"
 P SS ZX
 R nnnnnnnnnvnnnnnnnnvnnvnvnnnnvnnvnnnnnnnvnnnnvnnnnnnvnnnnnnnnnnnvnnnnnnnv2nnnnnv1+nn
 
-U class_cashier%b	class_cashier.adb	7f14cd4c OO PK
+U class_cashier%b	class_cashier.adb	0805e93d OO PK
 W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W class_lis%s		class_lis.adb		class_lis.ali
@@ -40,7 +40,7 @@ D a-tiflio.ads		20090409150019 56fbda09
 D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D class_cashier.ads	20120226134519 aa38408a
-D class_cashier.adb	20120226134347 d34dfc0b
+D class_cashier.adb	20120226163528 a45cd87a
 D class_lis.ads		20120226161431 1325d4b7
 D interfac.ads		20090409150019 f77d8799
 D i-c.ads		20101007125900 809c38c4
@@ -78,14 +78,14 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 15 class_cashier.ads
-4K9*Class_cashier 12l5 12e18 16|4b14 35l5 35t18
-6T19*Task_cashier 6d32 9l13 9e25 16|9b19 33l13 33t25
+4K9*Class_cashier 12l5 12e18 16|4b14 38l5 38t18
+6T19*Task_cashier 6d32 9l13 9e25 16|9b19 36l13 36t25
 6p32 p_Orders{17|42P14} 16|17r25
 7Y23 start 7>29 16|12b24 14l21 14t26
 7a29 cName{17|7A14} 16|13r32
-8Y23 finish 16|27b24
+8Y23 finish 16|30b24
 X 16 class_cashier.adb
-6r9 currOrder{17|8R14} 17m43 19r45 21r44
+6r9 currOrder{17|8R14} 17m43 19r45 21r44 23r55 24r37 24r73
 7b9 onDuty{boolean} 16r23
 10a9 name{17|7A14} 13m25 17r38
 12a30 cName{17|7A14}
@@ -95,14 +95,17 @@ X 17 class_lis.ads
 7A14*EmployeeName<string><integer> 15|7r38 16|10r16 12r39
 8R14*Order 16|6r21 17|18e19
 9i17*orderID{6I14} 16|19r55
+10i17*timePlacedH{integer} 16|23r65
+11i17*timePlacedM{integer} 16|24r47
+12i17*timePlacedS{integer} 16|24r83
 16a17*cashierName{7A14} 16|21r54
 28Y23 add 16|17s34
 42P14*P_OrderList(27W24) 15|6r41
 X 21 simple_io.ads
 4K9*Simple_io 15|1w6 2r5 16|1w6 2r5 21|162e14
-55U13*put=56:50 16|18s25 20s25 21s25 31s25
+55U13*put=56:50 16|18s25 20s25 21s25 23s25 23s78 24s60 34s25
 55s23 item{string} 16|21r29
-78U13*put=81:49 16|19s25
+78U13*put=81:49 16|19s25 23s51 24s33 24s69
 78i23 item{integer} 16|19r29
-136U13*new_line=137:46 16|22s25 31s59
+136U13*new_line=137:46 16|22s25 25s25 34s59
 

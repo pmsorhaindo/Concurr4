@@ -15,10 +15,13 @@ package body Class_cashier is -- implements Runnable
 
                 while onDuty loop
                         p_Orders.add(name,currOrder);
-                        put("Order Placed ID: ");
+                        put("+ Order Placed ID: ");
                         put(Item => Integer(currOrder.orderID));
                         put(" placed by: ");
                         put(Item => String(currOrder.cashierName));
+                        new_line;
+                        put("It was placed at: ");put(currOrder.timePlacedH);put(":");
+                                put(currOrder.timePlacedM);put(":");put(currOrder.timePlacedS);
                         new_line;
 
                         delay 4.0;

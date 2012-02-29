@@ -1,26 +1,287 @@
 Java/CPL Assignment Report
 
-Question 1
-Consumer Producer Problem using Java threads.
+Overview
 
+In this assignment four programming problems which span the topics of Concurrency and Networking are tackled. Also a comparison is made between the two languages used in this assignment ADA and Java. The problems takes place in the setting of a restaurant, with the primary focus on the interaction between Cashiers and Cooks. The following report lists summaries of each question each including a description of the solution and a critical analysis.
+
+Question 1
+
+The Problem
+
+In this question the aim is to model the interaction between Cooks and Cashiers using Java threads. The problem is a contextualized description of the Consumer Producer Problem. Here Cashiers take orders from customers and place them into a shared buffer of pending orders. The Cooks can then each remove the next order from the buffer. After a period of time has passed (the time it takes for them to cook the order) they would then retrieve another order from the buffer if one were available.
+
+Explanation of the solution
+
+In the solution new threads to instantiate Cook and Cashier runnable objects are created.
+Both the Cashier and the cook run their operations of adding or removing orders at random intervals the intervals specified in the problem statement are 5 seconds for the Cashier and 7 seconds for the Cook. The solution generates a random number and sleeps the thread of execution for that length of time with the following code.
+
+        // From Cashier.java
+        Random r = new Random();
+	try {
+		Thread.sleep(r.nextInt(4999));
+	} catch (InterruptedException e) {
+		e.printStackTrace();
+	}
+
+The Cashier's primary function works by calling an addOrder() method within an OrderList class. The OrderList symbolizing the list of orders currently held by the kitchen. The cashier then passes its name to this method for inclusion in the creation of the Order object which is stored in the OrderList. The time the order is placed is then assigned to the order upon its construction, within the OrderList's addOrder() method, in the Order class' constructor.
+
+        // From Order.java
+	public Order(String name){
+		Order.nextOrderID = Order.nextOrderID+1;
+		orderID = nextOrderID;
+		cashierName = name;
+		timePlaced = Calendar.getInstance();
+		timeCooked = null;
+	}
+	
+It is also interesting to note that the nextOrderID variable is made a static variable and therefore when it is incremented it does so from the last value an object of type Order left it at. As the only alteration of this variable is incrementation within the construct unique orderID's can be produced.
+
+The cook's primary function is to remove Orders and it does this with the OrderList class' removeOrder() function.
+ removeOrder() returns an order to the Cook from the ordersList ArrayList after first removing it from the list. The Cook thread then sleeps for for up to seven seconds representing the cooking time of the order before the thread finally prints the details of the order including a newly assigned timeCooked attribute, to the console.
+
+The OrderList class which is instantiated in the solution as an object called kitchen contains the implementations for the two methods utilized by the previous classes; addOrder() and removeOrder(). Apart from the fairly obvious functions of adding and removing Order objects to the two ArrayLists it holds as attributes, it does some additional work. First of all when cooks call the removeOrder method there is a condition to be met before the function operates on the ArrayLists.
+
+	while (ordersList.isEmpty()) {
+			try {
+				wait();
+			}
+			catch(Exception e)
+			{
+				System.err.println("Cook failed to execute wait()");
+			}
+		}
+
+This simply forces the thread to not execute the function any further while the OrderList is empty, avoiding potential errors.
+
+The next interesting thing that OrderList class does aids the thread to get out of this waiting state. When cashier threads call addOrder there is the following line of code within the addOrder function.
+
+        notifyAll();
+
+This breaks any waiting thread out of its wait state. Allowing it to recheck the condition ordersList.isEmpty(). This saves threads processing constant checks seeing if the OrderList is empty or not.
 
 Diagram
-Explain the solution
-Potential synchronization issues and how you have resolved them in question 1
+!!
+
+Classes
+Below a list of classes is listed highlighting important aspects of each.
+
+Cashier - Implements runnable allowing it run its own thread the run() method loops sleeping for up to 5 seconds and then calling the method addOrder on the passed OrderList object (called "kitchen" within the code). Once it has ran this method within the OrderList it prints out details from the Order object that has been returned to it by the OrderList(kitchen).  
+
+Cook - Implements runnable allowing also allowing it to run on its own thread, it is passed the OrderList object(kitchen) on instantiation. The then also follows the same pattern as the cashier looping forever through its cookOrder() function which calls removeOrder in the OrderList object(kitchen) and then sleeps for up to 7 seconds before outputting the details of the completed Order.
+
+Order - Stores the details of the order. These objects are stored in a Java ArrayList which is a dynamic data structure expanding to contain the amount of elements given it. The class also provides basic getters and setters for its attributes.
+
+OrderList - Instantiates two Java ArrayLists the ordersList and the completedList. The class also provides methods to that give the Cook and Cashier an interface to these ArrayLists. These methods are synchronized to prevent them being called simultaneously which could potentially lead to a mix up of orders.
+
+Potential Issues
+
+When modelling this problem, having several objects having the ability to access the same buffer simultaneously leaves room for potential synchronization issues however these issues have been foreseen and the solution handles them. First of all a problem can occur if two threads try to update the same object. Use of the ‘Synchronized’ keyword in the OrderList class methods prevents this from happening.
+
+        // From OrderList.java
+	synchronized public Order removeOrder(String cookName)
+	{
+		// ... wait() code ommited from snippet for conciseness
+		completedList.add(ordersList.get(0));
+		ordersList.remove(0);
+		completedList.get(completedList.size()-1).setCookName(cookName);
+		Order orderComplete = completedList.get((completedList.size()-1));
+		return orderComplete;
+	}	
+
+Only one thread at a time can execute a ‘synchronized’ block of code in a particular object so this prevents multiple cashiers calling remove while there is only one order in the ArrayList. Other threads need to wait until the current thread exits the synchronized block of code.
+
+The concurrency inherent in this solution  creates the risk of the solution be affected by the following four problems: deadlock, livelock, starvation, priority inversion. The solution presented is not affected by these as !!
+
+There are also potential problems with the use of wait() and notifyAll(), if no threads are waiting when notifyAll() is called nothing would happen or if a thread calls wait() too late, as it would miss the call to notify(). Both of these issues are handled in the solution as if no thread is waiting the call to notify would not be needed as it would meet the condition wrapped around the wait and continue executing the removeOrder code. In the other case there is no possiblity of it calling wait too late as an order is always present just before notifyAll() is called.
+
+
+Testing Solutions Output
+
+Cashier: Ed  1  Placed at: 12:59:46:080
+Cashier: Bob  2  Placed at: 12:59:49:597
+Cashier: Ed  3  Placed at: 12:59:50:479
+Cashier: Ed  4  Placed at: 12:59:52:519
+Cook: Bill finished cooking Order 1 at: 12:59:52:909. It was placed at: 12:59:46:080 by Ed
+Cook: Fred finished cooking Order 2 at: 12:59:53:047. It was placed at: 12:59:49:597 by Bob
+Cashier: Ed  5  Placed at: 12:59:53:249
+Cashier: Bob  6  Placed at: 12:59:53:863
+Cashier: Ed  7  Placed at: 12:59:54:349
+Cashier: Bob  8  Placed at: 12:59:55:190
+Cook: Bill finished cooking Order 3 at: 12:59:56:078. It was placed at: 12:59:50:479 by Ed
+Cashier: Ed  9  Placed at: 12:59:57:316
+Cashier: Ed  10  Placed at: 12:59:57:539
+Cook: Bill finished cooking Order 5 at: 12:59:58:324. It was placed at: 12:59:53:249 by Ed
+Cook: Fred finished cooking Order 4 at: 12:59:58:359. It was placed at: 12:59:52:519 by Ed
+Cashier: Bob  11  Placed at: 12:59:58:806
+Cook: Bill finished cooking Order 6 at: 12:59:58:862. It was placed at: 12:59:53:863 by Bob
+Cook: Fred finished cooking Order 7 at: 12:59:59:359. It was placed at: 12:59:54:349 by Ed
+Cashier: Bob  12  Placed at: 13:00:00:198
+Cashier: Ed  13  Placed at: 13:00:00:889
+Cashier: Bob  14  Placed at: 13:00:00:900
+Cashier: Bob  15  Placed at: 13:00:01:879
+Cook: Fred finished cooking Order 9 at: 13:00:03:440. It was placed at: 12:59:57:316 by Ed
+Cashier: Bob  16  Placed at: 13:00:03:505
+Cook: Bill finished cooking Order 8 at: 13:00:04:295. It was placed at: 12:59:55:190 by Bob
+Cashier: Ed  17  Placed at: 13:00:04:932
+
 
 
 Question 2
-Consumer Producer Problem implemented on a distributed system.
+
+In the second problem statment an expansion on the Consumer Producer Problem is presented requiring the code to be implemented on a distributed system. The solution given uses the TCP/IP protocol and makes use of Java sockets in order to achieve this requirement.
+
 which should for example cover potential synchronization issues and how you have resolved them in question 1, the application protocol which your classes use to communicate in questions 2 and 3
+
+The Problem
+
+Explanation of the Solution
+
+As mentioned in the description of the problem a TCP/IP networking approach was taken to the solution of this problem using Java sockets. When using the system the GUI is loaded
+        
+        // From Main.java
+        Thread window = new Thread(new GUI(),"window");
+	window.start();
+
+This starts the GUI which is the hub of the program, the first action to be taken is to launch an instance of Server which listens on a port provided by the GUI.
+        
+        // From GUI.java
+        else if (e.getActionCommand().equals("Launch Server"))
+	{
+		if (serverRunning!=true)
+		{
+		System.out.println("go serv");
+		int listenPort= Integer.parseInt(txtEnterServerPort.getText());
+		server = new Thread(new Server(listenPort), "server");
+		server.start();
+                ...
+
+Once the server thread is running it creates a new ServerSocket and enters an indefinate loop waiting for connections on that port, when connections are recieved it spawns a ServerThread object which runs on a seperate thread.
+
+        // From Server.java
+        while (listening)
+        {
+		new ServerThread(serverSocket.accept(),kitchen).start();
+	}
+
+The ServerThread then loops indefinately listening on its socket for messages on the PrintStream of the socket. In the code below, the variable in holds the InputStream which is the messages messages received on the socket while the variable out holds the OutputStream which the ServerThread uses to print to the object on the recieving end of the socket.
+
+        // From ServerThread.java
+        in = new BufferedReader(  new InputStreamReader(  socket.getInputStream()));
+        out = new PrintStream(socket.getOutputStream());
+	while(true){
+		
+		while ((input = in.readLine()) != null){
+			output = com.processInput(input);
+			out.print(output+"\n");
+			//... code for closing the socket via the message "Close" is ommitted for conciseness.
+			}
+		}
+
+The only thing not obvious in the code above is the com object, which is a instance of the KitchenComm class. So in summary the ServerThread recieves messages from a client and responds by processing the input with the help of its KitchenComm object. The code the KitchenComm class uses to process the input is quite lengthy but it is essentially a switch statment which takes the first character in the string which is an integer and switches based on it's value. The commands which respond to each value are as follows:
+
+1:addOrder()
+2:removeOrder()
+3:completeOrder()
+4:interruptOrder()
+
+These functions work in the same way as they did in the first task, except remove Order now moves the Order object to a list called pendingOrders. and interruptOrder searches the pendingList for an Order and places it back in the ordersList. completeOrder() now moves Orders from the pendingList to the completedList.
+
+The final difference in this solution to the previous solution is found in the clients. As they send requests to their respective ServerThreads as strings rather than accessing methods in the OrderList class directly. Firstly Cashier's need to Log on.
+
+        // From Staff.Java
+	if(!cashiersList.containsKey(name)&&!cooksList.containsKey(name))
+	{
+	cashiersList.put(name, t);
+	return true;
+	}
+
+The above snippet shows that a check is made to ensure no Cashiers of the same name are logged in before adding the cashier to the list, this also allows the function to returns true signaling to the GUI it is ok to create the Thread. The method the snippet is taken from is also synchronized to protect against the event of two clients logging in simultaneously and providing the same information. A snippet of how a client (here a Cook) would communicate with the server, for completeness.
+
+	if ((input = in.readLine()) != null){
+		recievedOrderID =  parseOrderRemoveReturn(input);
+		//System.out.println("Cook: " + parseOrderRemoveReturn(input));
+		Random r = new Random();
+		Thread.sleep(r.nextInt(6999)); // random int used for its value as milliseconds between 0 and 6999.
+	}
+	out.print("3*" + getCookName()+"*"+ recievedOrderID +"\n");
+	... // code for reciving response ommited for conciseness.
+
+Again, in and out are variables for the InputStream and OutputStream. parseOrderRemoveReturn() is a function of the Cook's used to extract the orderID of the order it recieved to cook.
+
+Diagram
+
+Classes
+Below a list of classes is listed highlighting important aspects of each.
+
+Cashier - This class operates the same as before except now it includes code which connects it to the Server holding the OrderList object. The server's address and port are passed in by parameters in the Cashier's constructor. Instead of sending an Order object back to the Cashier the Cook now sends a encoded string over the network back to the Cashier. So the Cashier also has functions to decode this string and output it as before.
+
+Cook - Abstractly speaking the Cook class also operates at all but there are also several modifications. The Cook, like the Cashier class also connects to a server address and port provided to it via the constructor parameters and it has methods to decode the encoded order complete string sent to it by the OrderList Server. However it also has two methods of communicating with OrderList. It can send a message asking to remove an order for cooking. But if it logs out during the cooking of an order its interrupt exception now sends a message back to the OrderList object telling it to return the Order to the pendingList.
+
+OrderList - The changes mentioned in the Cook class above tie nicely into the changes made to the OrderList Class. It previously held two ArrayList's but now holds three, the ordersList the completedList and an additional pendingList. It's functions have been modified so that when a cook request's an order for cooking, the order is moved to the pendingList. Once the Cook finishes' cooking the order he calls a new method within OrderList called completeOrder() which moves the order the Cook has finished with to the completedList, should the Cook not complete the order the Cook class' exception calls interruptedOrder() which returns the Order the Cook was processing back to the orderList ArrayList, removing it from the pendingList.
+
+KitchenComm - In the above description of the OrderList the words "called completeOrder()" and "calls interruptedOrder()" were used. This is actually false, as Cook and Cashier now communicate over the network functions in the OrderList class aren't called directly. Instead the KitchenComm (Kitchen Communications) class which is instantiated for each ServerThread parses encoded strings sent from the Cooks and Cashier's extracting the information about the method the Cook/Cashier wishes to run on the server bound OrderList and the parameters that the method requires. Each piece of information (the parameters) in the encoded string is seperated with an asterisk and the first value is an integer which is put into a switch to determine the method to be run on the server.
+
+Server - This is the main thread that is launched on the Server it creates the only OrderList class to be used by the application, it is also provided with a port number to listen on which is passed as a parameter and then loops indefinately, listening for a connection on that port number. When a connection is recieved it spawns a previously mentioned ServerThread. Passing it the OrderList object and the accepted socket.
+
+ServerThread - There is a ServerThread object created for every connection to the Server and as is suggested by their name they are seperately running threads that communicate with the same OrderList created in the Server class as it passed to each as a parameter. The Server thread creates an instance of the KitchenComm class which used to parse messages sent to it from the connected Cook/Cashier.
+
+GUI - This class is mainly there to make testing easier it is launched in Main when the application is first executed, and takes the values in its text boxes for "Target Address" or "Target Port" to instantiate new threads for Cashiers or Cooks with the values from the text boxes passed as parameters.
+
+Staff - This class effectively manages the Cooks and Cashiers. It stores the Cashiers in a Hashmap of Cashier's and the Cook's in a seperate Hashmap. The key used to identify each item in the map is the name of the Cook/Thread that is created, the thread of execution is then stored as the data value in the map. This allows for threads to be interrupted by name via the "Log off" buttons on the GUI.
+
+Order - Nothing has changed in this class.
+
+Potential Issues
+
+Although the solution does it's best to handle events such as a Cook or Cashier dropping out of the system there is nothing in place to hold the state of the system should the server itself loose connectivity with all the staff. Also messages are passed around the system in string format which means they would be very easy to understand, should the network be compromised people could easily view and understand the information being sent and recieved. Furthermore there is no security to prevent unwanted clients connecting to the server sending bogus messages, even though the switch case in the communication class would not parse these once someone understood the messages and the effect they had they could easily disrupt the system by sending messages to complete orders without cooking them.
+
+Testing the Solution's Output
 
 
 Question 3
-Enhanced the solution to question 2 to allow th Consumer to communicate to the Producer
+
+The Problem
+
+The third task enhanced the solution to the previous solution to allow the Consumer to communicate to the Producer. In this case the Cook would tell the Cashier that the order was complete and the Cashier would output the information. Apart from this change none of the mechanics are changed, so the system operates the same as before but now with the Cashier who placed the order outputting the details of order's completion as provided by the Cook who completed it.
 
 which should for example cover potential synchronization issues and how you have resolved them in question 1, the application protocol which your classes use to communicate in questions 2 and 3
 
+
+Explanation of the Solution
+
+On completion of cooking the order the cashier recieves input as it did before in the previous solution.
+
+        // From Cook.java
+	if ((input = in.readLine()) != null){
+		//System.out.println("Cook: " + parseOrderCompleteReturn(input));
+		//System.out.println("Cook: " + input);
+
+		//Parse Order for Cashier details			
+		InetAddress targetAddress = InetAddress.getByName(parseCashierAddress(input));
+		input = input.substring((getNextStarPos(input)+1),input.length());
+		int targetPort = parseCashierPort(input);
+		input = input.substring((getNextStarPos(input)+1),input.length());
+
+		Writer toCashier = new Writer(targetAddress,targetPort);
+		toCashier.report(input);
+	}
+
+Diagram
+
+Classes
+Below a list of classes is listed highlighting important aspects of each.
+
+Potential Issues
+
+Testing the Solution's Output
+
+
 Question 4
 Implemented the Consumer Producer Problem using ADA Tasks. How does it differ to Java threads.
+
+In ADA there are issues with creating a structure which extends dynamic. 
+fixed buffer a certain size array
+
 
 Limited buffer in ADA as opposed to Java's linked list.
 and a comparison of your Ada and Java solutions in question 4
@@ -28,5 +289,23 @@ Library functions lacking in ADA
 
 Ada does not directly deal with minutes. Minutes are contained in the Seconds value, which is the number of seconds into the day for the current time. Seconds is a value from 0.0 through 86400.0
 
+Ada generates the same random number across all threads ;/
 
 A printed description and critique of your solutions (which should for example cover potential synchronization issues and how you have resolved them in question 1, the application protocol which your classes use to communicate in questions 2 and 3, and a comparison of your Ada and Java solutions in question 4).
+
+
+The Problem
+
+Explanation of the Solution
+
+Diagram
+
+Classes
+Below a list of classes is listed highlighting important aspects of each.
+
+Potential Issues
+
+A Comparison to Java
+
+Testing the Solution's Output
+

@@ -18,12 +18,18 @@ package body Class_cook is
                 
                 while onDuty loop
                         p_Orders.remove(name,currOrder);
-                        put("Order Cooked ID: ");
+                        put("- Order Cooked ID: ");
                         put(Item => Integer(currOrder.orderID));
                         put(" placed by: ");
                         put(Item => String(currOrder.cashierName));
                         put(" and Cooked by: ");
                         put(Item => String(currOrder.cookName));
+                        new_line;
+                        put("It was placed at: ");put(currOrder.timePlacedH);put(":");
+                                put(currOrder.timePlacedM);put(":");put(currOrder.timePlacedS);
+                        new_line;
+                        put("It was cooked at: ");put(currOrder.timeCookedH);put(":");
+                                put(currOrder.timeCookedM);put(":");put(currOrder.timeCookedS);
                         new_line;
                         delay 7.0;
                 end loop;

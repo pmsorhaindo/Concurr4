@@ -37,6 +37,7 @@ package body class_lis is
                         returnedOrder.timeCookedM := The_Minutes;
                         returnedOrder.timeCookedS := Integer(The_Seconds);
                         returnedOrder.cookName := cookName;
+        
                         head := head+1;
                         ordersInList := ordersInList - 1;
                 end;
@@ -58,7 +59,7 @@ package body class_lis is
                         Seconds := Integer(The_Seconds) mod 60;
 
                         createdOrder := (orderID=>nextID, timePlacedH=> The_Hour, timePlacedM=> The_Minutes, timePlacedS=> Seconds,             
-                                timeCookedH=> 0, timeCookedM=> 0, timeCookedS=> 0, cashierName=>name, cookName=>"null      ");
+                                timeCookedH=> 1, timeCookedM=> 0, timeCookedS=> 0, cashierName=>name, cookName=>"null      ");
 
                         return createdOrder;
                 end newOrder;
